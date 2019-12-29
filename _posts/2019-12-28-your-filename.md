@@ -6,62 +6,18 @@ published: true
 ## A New Post
 
 this is my second post, hoopla.
-
-      <h3><b>Geometry of SOCP (Rotated Second Order Cones)</b></h3>
-      <h5><span class="w3-opacity">November 19, 2018</span></h5>
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-      <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-      });
-      </script>
-      <h4>Motivation</h4>
-      Second Order Cone Programming is a powerful tool. This convex optimization problem has the form:
-      $$\text{min}_{x \in \mathbb{R}^n} c^Tx \\ 
-      \text{s.t. } \|A_ix+b_i\|_2 \leq c_i^Tx+d_i$$
-      There are many optimization problems that can be reduced to this general form, but the punchline is, we now allow for constraints involving the norm of $x$, a step up from the linear constraints that we required in LPs, and QPs. But it is not obvious why SOCPs are more "general" than QCQPs, which have the form:
-      $$\text{min}_{x \in \mathbb{R}^n} x^TH_0x+2c_0^Tx+d_0 \\ 
-      \text{s.t. } x^TH_ix+2c_i^Tx+d_i \leq 0 \\
-      x^TH_jx+2c_j^Tx+d_j = 0$$
-      Can't we just square the inequality constraint in our SOCP, such that it can be massaged into a QCQP? This is not the case, because in general, it is invalid to square constraints of the form $\|x\| \leq k$. So SOCP is at least as general as QCQP. 
-
-
-      <h4>Terminology</h4>
-      What is a cone? The definition of a cone is any set $\mathcal{S}$ that satisfies the property that $s \in \mathcal{S} \Rightarrow \alpha s \in \mathcal{S}, \alpha \geq 0$. There are all types of different cones that topologists love to study, but we will look at the "norm cone" with respect to a norm $\|*\|$:
-      $$\mathcal{C}=\{(x,t), \|x\| \leq t\} \subseteq \mathcal{R}^{n+1}$$ 
-      We mathematically define an $(n+1)$ dimensional Second Order Cone as follows:
-      $$\mathcal{K}_n=\{(x,t),x \in \mathbb{R}^n, t \in \mathbb{R}: \|x\|_2 \leq t\}$$
-      Here, we see the meaning of the name "Second Order" cone, as it is a norm cone using the $\mathcal{l}_2$ norm. Another equivalent definition of the $(n+1)$ second order cone is the intersection of an infinite number of half spaces:
-      $$\mathcal{k}_n=\bigcap_{u:\|u\| \leq 1}\{(x,t), x \in \mathbb{R}^n, t \in \mathbb{R} : x^Tu \leq t\}$$
-
-
-
-      <h4>Geometry</h4>
-      We now introduce a constraint known as a hyperbolic constraint:
-      $$\|x\|_2^2 \leq 2yz, y \geq 0, z \geq 0, \text{where: } x \in \mathbb{R}^n, y \in \mathbb{R}, z \in \mathbb{R}$$
-      Then, we claim that this constraint is exactly equivalent to the Second Order Cone constraint:
-      $$\|\begin{bmatrix}
-      x \\
-      \frac{1}{\sqrt{2}}(y-z)
-      \end{bmatrix}\|_2 \leq \frac{1}{\sqrt{2}}(y+z)$$
-      which can be verified algebraically. What we have just done is converted hyperbolic constraints into SOC constraints. However, if we inspect the resulting SOC constraint, and reverse engineer it, we see that:
-      $$\begin{bmatrix}
-      I_n & 0 & 0 \\
-      0 & \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \\
-      0 & \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}
-      \end{bmatrix}
-      \begin{bmatrix}
-      x \\
-      y \\
-      x \\
-      \end{bmatrix} = 
-      \begin{bmatrix}
-      x \\
-      \frac{1}{\sqrt{2}}(y-z) \\
-      \frac{1}{\sqrt{2}}(y+z)
-      \end{bmatrix} 
-      $$
-      The matrix on the left is a rotation matrix in the $y,z$ plane of 45 degrees clockwise. Hyperbolic constraints are equivalent to a funny looking SOC constraint, which is equivalent to actually just an SOC, "toppled" to the ground, or formally speaking, rotated! And so this is where we get the notion of a rotated SOC. We start with an SOC, apply to it a rotation matrix, and realize that the result is equivalent to a hyperbolic constraint. How neat!
-
-      <h4>References</h4>
-      Optimization Models by Calafiore and El Ghaoui, and Convex Optimization by Stephen Boyd.
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<h4>Motivation</h4>
+Second Order Cone Programming is a powerful tool. This convex optimization problem has the form:
+$$\text{min}_{x \in \mathbb{R}^n} c^Tx \\ 
+\text{s.t. } \|A_ix+b_i\|_2 \leq c_i^Tx+d_i$$
+There are many optimization problems that can be reduced to this general form, but the punchline is, we now allow for constraints involving the norm of $x$, a step up from the linear constraints that we required in LPs, and QPs. But it is not obvious why SOCPs are more "general" than QCQPs, which have the form:
+$$\text{min}_{x \in \mathbb{R}^n} x^TH_0x+2c_0^Tx+d_0 \\ 
+\text{s.t. } x^TH_ix+2c_i^Tx+d_i \leq 0 \\
+x^TH_jx+2c_j^Tx+d_j = 0$$
+Can't we just square the inequality constraint in our SOCP, such that it can be massaged into a QCQP? This is not the case, because in general, it is invalid to square constraints of the form $\|x\| \leq k$. So SOCP is at least as general as QCQP. 
