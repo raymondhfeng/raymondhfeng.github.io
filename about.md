@@ -9,8 +9,8 @@ Some information about you!
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+Senior at UC Berkeley studying computer science. Concentration in Machine Learning. Dabbles in poker, sports betting, sports analytics.
 
 ### Contact me
 
-[email@domain.com](raymondhfeng@) name of school .edu
+raymondhfeng name of school .edu
