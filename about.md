@@ -4,12 +4,11 @@ title: About
 permalink: /about/
 published: true
 ---
-
-Some information about you!
+Senior at UC Berkeley studying computer science. Concentration in Machine Learning. Dabbles in poker, sports betting, sports analytics.
 
 ### More Information
+[Quixotic though it may sound](https://web.stanford.edu/~lmackey/), I hope to use CS to make the world a better place. 
 
-Senior at UC Berkeley studying computer science. Concentration in Machine Learning. Dabbles in poker, sports betting, sports analytics.
 
 ### Contact me
 
