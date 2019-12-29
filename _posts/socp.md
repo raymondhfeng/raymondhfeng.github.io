@@ -26,9 +26,9 @@ $$x^TH_jx+2c_j^Tx+d_j = 0$$
 Can't we just square the inequality constraint in our SOCP, such that it can be massaged into a QCQP? This is not the case, because in general, it is invalid to square constraints of the form $\|x\| \leq k$. So SOCP is at least as general as QCQP. 
 
 <h4>Terminology</h4>
-What is a cone? The definition of a cone is any set $\mathcal{S}$ that satisfies the property that $s \in \mathcal{S} \Rightarrow \alpha s \in \mathcal{S}, \alpha \geq 0$. There are all types of different cones that topologists love to study, but we will look at the "norm cone" with respect to a norm $\|*\|$:
+What is a cone? The definition of a cone is any set $\mathcal{S}$ that satisfies the property that $$s \in \mathcal{S} \Rightarrow \alpha s \in \mathcal{S}, \alpha \geq 0$$. There are all types of different cones that topologists love to study, but we will look at the "norm cone" with respect to a norm $$\|*\|$$:
 $$\mathcal{C}=\{(x,t), \|x\| \leq t\} \subseteq \mathcal{R}^{n+1}$$ 
 We mathematically define an $(n+1)$ dimensional Second Order Cone as follows:
 $$\mathcal{K}_n=\{(x,t),x \in \mathbb{R}^n, t \in \mathbb{R}: \|x\|_2 \leq t\}$$
-Here, we see the meaning of the name "Second Order" cone, as it is a norm cone using the $\mathcal{l}_2$ norm. Another equivalent definition of the $(n+1)$ second order cone is the intersection of an infinite number of half spaces:
+Here, we see the meaning of the name "Second Order" cone, as it is a norm cone using the $$\mathcal{l}_2$$ norm. Another equivalent definition of the $(n+1)$ second order cone is the intersection of an infinite number of half spaces:
 $$\mathcal{k}_n=\bigcap_{u:\|u\| \leq 1}\{(x,t), x \in \mathbb{R}^n, t \in \mathbb{R} : x^Tu \leq t\}$$
