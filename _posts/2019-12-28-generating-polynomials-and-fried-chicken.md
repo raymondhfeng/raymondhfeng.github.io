@@ -34,6 +34,8 @@ This is where I got stuck, and where the trick comes in. To easily compute this 
 
 > Roots of unity: The solutions to the equation $$x^2=1$$ are $$x=e^{\frac{2\pi}{2}},e^{\frac{2\pi}{1}}=1,-1$$. If we set $$\omega=e^{\frac{2\pi}{2}}$$, then $$\omega, \omega^2$$ are called the roots of unity when $$n=2$$. For any $$n$$, the roots of unity sum to zero. 
 
+> Fact: The roots of unity will sum to 0. 
+
 If you feel like I am pulling this out of my hat, well then you are right, but stay with me now. Let's go deeper into the territory of seemingly baseless calculations, and evaluate $$(1+\omega)^n+(1+\omega^2)^n$$, which, using a binomial expansion, we see comes out to:
 
 <p style="text-align: center;">
