@@ -32,9 +32,9 @@ This means that if we have $$n=100$$, then we can sum up the "even-headed" outco
 
 This is where I got stuck, and where the trick comes in. To easily compute this summation, you can use the roots of unity filter. 
 
-> Roots of unity: The solutions to the equation $$x^2=1$$ are $$x=e^{\frac{2\pi}{2}},e^{\frac{2\pi}{1}}=1,-1$$. If we set $$\omega=e^{\frac{2\pi}{2}}$$, then $$\omega, \omega^2$$ are called the roots of unity when $$n=2$$. For any $$n$$, the roots of unity sum to zero. 
+> Roots of unity: The solutions to the equation $$x^2=1$$ are $$x=e^{\frac{2\pi}{2}},e^{\frac{2\pi}{1}}=1,-1$$. If we set $$\omega=e^{\frac{2\pi}{2}}$$, then $$\omega, \omega^2$$ are called the roots of unity when $$n=2$$. 
 
-> Fact: The roots of unity will sum to 0. 
+> Fact: For any $$n$$, the roots of unity sum to zero. 
 
 If you feel like I am pulling this out of my hat, well then you are right, but stay with me now. Let's go deeper into the territory of seemingly baseless calculations, and evaluate $$(1+\omega)^n+(1+\omega^2)^n$$, which, using a binomial expansion, we see comes out to:
 
