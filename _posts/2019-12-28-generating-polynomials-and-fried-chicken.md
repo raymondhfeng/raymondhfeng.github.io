@@ -53,7 +53,7 @@ Going back to our original summation, we make an observation:
 	$$G(x)=(px+(1-p))^n=\binom{n}{0}(1-p)^n+\binom{n}{1}p(1-p)^{n-1}x+\binom{n}{2}p^2(1-p)^{n-2}x^2+...$$
 </p>
 
-> The sum of the coefficients of the even powers is the answer to our problem! So finally.
+*The sum of the coefficients of the even powers is the answer to our problem!* So finally.
 
 <p style="text-align: center;">
 	$$\text{Probability of even heads}=\frac{G(1)+G(-1)}{2}$$
