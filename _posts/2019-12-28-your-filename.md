@@ -14,7 +14,7 @@ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
 </script>
 <h4>Motivation</h4>
 Second Order Cone Programming is a powerful tool. This convex optimization problem has the form:
-$$\text{min}_{x \in \mathbb{R}^n} c^Tx \\ 
+$$\text{min}_{x \in \mathbb{R}^n} c^Tx 
 \text{s.t. } \|A_ix+b_i\|_2 \leq c_i^Tx+d_i$$
 There are many optimization problems that can be reduced to this general form, but the punchline is, we now allow for constraints involving the norm of $x$, a step up from the linear constraints that we required in LPs, and QPs. But it is not obvious why SOCPs are more "general" than QCQPs, which have the form:
 $$\text{min}_{x \in \mathbb{R}^n} x^TH_0x+2c_0^Tx+d_0 \\ 
