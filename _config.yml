@@ -9,7 +9,7 @@ name: Raymond Feng
 description: Software Engineer
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://github.com/raymondhfeng/raymondhfeng.github.io-OLD-/blob/master/ray2.jpg
+avatar: ![_config.yml]({{ site.baseurl }}/images/config.png)
 
 #
 # Flags below are optional
