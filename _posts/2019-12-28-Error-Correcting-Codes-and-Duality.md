@@ -23,11 +23,11 @@ Browsing through the comments, I saw that one of the comments said something som
 
 What is the most "disruptive" that a single bit can be? Let's label the chessboard using length 6 bitstrings:
 
-![alt text](https://raymondhfeng.github.io/images/chessboard.png "Labeled Chessboard")
+![alt text](https://raymondhfeng.github.io/images/chessboard.png=250x "Labeled Chessboard")
 
 We want the flip of any single coin to be as "selectively disruptive" as possible. What this means is, if the starting configuration of the board tells some information (the secret position), then the flip of some coin must be able to take us to any other encoded position. Here we have a random starting position of the chessboard. 
 
-![alt text](https://raymondhfeng.github.io/images/randomized-chessboard.png "Randomized Chessboard")
+![alt text](https://raymondhfeng.github.io/images/randomized-chessboard.png=250x "Randomized Chessboard")
 
 Clearly, we haven't defined what position this chessboard encodes, but what we do know is that the flip of a particular coin on this chessboard will allow us to represent the encoding of any position. This motivates us to try the following:
 
@@ -39,6 +39,6 @@ This can be understood much clearer via an example. We want to recover abcdef, w
 
 And finally, if no bit needs to be flipped, then just flip the coin at position 000000, as this will not change the encoding. 
 
-Credit for this solution goes to G.J. Woeginger [from this thread](https://groups.google.com/forum/m/#!topic/comp.theory/mSmXV1_oXWc), which seems to be a mailing list on computing theory.
+Credit for this solution goes to G.J. Woeginger [from this thread](https://groups.google.com/forum/m/#!topic/comp.theory/mSmXV1_oXWc), which seems to be a mailing list on computing theory. Apparently this is a standard problem in coding theory. 
 
 As a final remark, there surely can be a lot to explored on the relationship between this scheme, and it's relationship to error correcting codes. There must be some duality, but I think I will leave this blog post here. 
