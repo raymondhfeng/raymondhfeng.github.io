@@ -41,4 +41,4 @@ And finally, if no bit needs to be flipped, then just flip the coin at position 
 
 Credit for this solution goes to G.J. Woeginger [from this thread](https://groups.google.com/forum/m/#!topic/comp.theory/mSmXV1_oXWc), which seems to be a mailing list on computing theory.
 
-As a final remark, there surely can be a lot to explored on the relationship between this scheme, and it's relationship to error correcting codes. There must be some duality, but I think I will leave this blog post at this. 
+As a final remark, there surely can be a lot to explored on the relationship between this scheme, and it's relationship to error correcting codes. There must be some duality, but I think I will leave this blog post here. 
