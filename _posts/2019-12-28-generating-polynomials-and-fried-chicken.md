@@ -59,3 +59,5 @@ Going back to our original summation, we make an observation:
 	$$\text{Probability of even heads}=\frac{G(1)+G(-1)}{2}$$
 	$$=\frac{1-(1-2p)^n}{2}$$
 </p>
+
+This result can be generalized to any modulo, doesn't have to be two. 

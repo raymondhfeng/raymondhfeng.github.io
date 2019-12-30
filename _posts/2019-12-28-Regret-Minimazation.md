@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Regret Minimazation
+title: Regret Minimazation and solving poker. 
 published: true
 ---
 
