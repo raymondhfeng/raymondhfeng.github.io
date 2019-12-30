@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Error correcting codes, hypercubes, and duality
+title: Error correcting codes, duality, and the devil's chessboard
 published: true
 ---
 
