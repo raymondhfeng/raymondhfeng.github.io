@@ -23,12 +23,13 @@ Browsing through the comments, I saw that one of the comments said something som
 
 What is the most "disruptive" that a single bit can be? Let's label the chessboard using length 6 bitstrings:
 
-<img src="https://raymondhfeng.github.io/images/chessboard.png" width="200">
+<img src="https://raymondhfeng.github.io/images/chessboard.png" width="500">
 <!-- ![alt text](https://raymondhfeng.github.io/images/chessboard.png "Labeled Chessboard") -->
 
 We want the flip of any single coin to be as "selectively disruptive" as possible. What this means is, if the starting configuration of the board tells some information (the secret position), then the flip of some coin must be able to take us to any other encoded position. Here we have a random starting position of the chessboard. 
 
-![alt text](https://raymondhfeng.github.io/images/randomized-chessboard.png "Randomized Chessboard")
+<img src="https://raymondhfeng.github.io/images/randomized-chessboard.png" width="500">
+<!-- ![alt text](https://raymondhfeng.github.io/images/randomized-chessboard.png "Randomized Chessboard") -->
 
 Clearly, we haven't defined what position this chessboard encodes, but what we do know is that the flip of a particular coin on this chessboard will allow us to represent the encoding of any position. This motivates us to try the following:
 
