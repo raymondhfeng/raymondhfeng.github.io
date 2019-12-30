@@ -28,7 +28,7 @@ What is the most "disruptive" that a single bit can be? Let's label the chessboa
 
 We want the flip of any single coin to be as "selectively disruptive" as possible. What this means is, if the starting configuration of the board tells some information (the secret position), then the flip of some coin must be able to take us to any other encoded position. Here we have a random starting position of the chessboard. 
 
-<img src="https://raymondhfeng.github.io/images/randomized-chessboard.png" width="500" class="center">
+<img src="https://raymondhfeng.github.io/images/randomized-chessboard.png" width="350" class="center">
 <!-- ![alt text](https://raymondhfeng.github.io/images/randomized-chessboard.png "Randomized Chessboard") -->
 
 Clearly, we haven't defined what position this chessboard encodes, but what we do know is that the flip of a particular coin on this chessboard will allow us to represent the encoding of any position. This motivates us to try the following:
