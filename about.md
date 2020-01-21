@@ -12,3 +12,5 @@ Senior at UC Berkeley studying computer science. Concentration in Machine Learni
 ### Contact me
 
 raymondhfeng name of school .edu
+
+[resume](https://drive.google.com/open?id=1hxNz4Zcrb6m2VQVJa42kJlVD9ygp0Wfl)
