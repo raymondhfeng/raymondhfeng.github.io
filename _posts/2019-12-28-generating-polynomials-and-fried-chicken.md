@@ -32,7 +32,7 @@ This means that if we have $$n=100$$, then we can sum up the "even-headed" outco
 
 This is where I got stuck, and where the trick comes in. To easily compute this summation, you can use the roots of unity filter. 
 
-> Roots of unity: The solutions to the equation $$x^2=1$$ are $$x=e^{\frac{2\pi}{2}},e^{\frac{2\pi}{1}}=1,-1$$. If we set $$\omega=e^{\frac{2\pi}{2}}$$, then $$\omega, \omega^2$$ are called the roots of unity when $$n=2$$. 
+> Roots of unity: The solutions to the equation $$x^2=1$$ are $$x=e^{\frac{2i\pi}{2}},e^{\frac{2i\pi}{1}}=1,-1$$. If we set $$\omega=e^{\frac{2i\pi}{2}}$$, then $$\omega, \omega^2$$ are called the roots of unity when $$n=2$$. 
 
 > Fact: For any $$n$$, the roots of unity sum to zero. 
 
@@ -61,3 +61,6 @@ Going back to our original summation, we make an observation:
 </p>
 
 This result can be generalized to any modulo, doesn't have to be two. 
+
+<h4>References</h4>
+[Jonathan Xia's Notes](https://drive.google.com/file/d/0B_WFOD8f4jS5NEhMQ3NSMXJwUXc/view)
