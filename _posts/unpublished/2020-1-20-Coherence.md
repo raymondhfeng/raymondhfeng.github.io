@@ -30,5 +30,6 @@ The problem is horse races are not coin flips. You can't reproduce them.
 So the Dutch book as shown above tells us that if our odds that we lay are *coherent*, i.e. follows the rules of probability, like having all mutually exclusive events sum to 1, then it is impossible to construct such a Dutch book. 
 
 <h4>References</h4>
+
 [Wikipedia entry on Dutch Books](https://en.wikipedia.org/wiki/Dutch_book)
 [Wikipedia entry on Coherence](https://en.wikipedia.org/wiki/Coherence_(philosophical_gambling_strategy))
