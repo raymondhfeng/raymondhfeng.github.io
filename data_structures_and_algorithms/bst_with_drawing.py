@@ -1,21 +1,42 @@
-class BstNode:
+import random
 
-    def __init__(self, key):
-        self.key = key
-        self.right = None
-        self.left = None
+class BstNode:
+    def __init__(self, arr):
+        splitIndex = len(arr) // 2
+        self.key = arr[splitIndex]
+
+        if len(arr) > 1:
+            def helper(arr):
+                print(arr)
+                print(len(arr))
+                splitIndex = len(arr) // 2
+                if len(arr) == 0:
+                    return None
+                elif len(arr) == 1:
+                    return BstNode([arr[splitIndex]])
+                else:
+                    node = BstNode([arr[splitIndex]])
+                    node.left = helper(arr[:splitIndex])
+                    node.right = helper(arr[splitIndex:])
+                    return node
+
+            self.left = helper(arr[:splitIndex])
+            self.right = helper(arr[splitIndex:])
+        else:
+            self.left = None
+            self.right = None
 
     def insert(self, key):
         if self.key == key:
             return
         elif self.key < key:
             if self.right is None:
-                self.right = BstNode(key)
+                self.right = BstNode([key])
             else:
                 self.right.insert(key)
         else: # self.key > key
             if self.left is None:
-                self.left = BstNode(key)
+                self.left = BstNode([key])
             else:
                 self.left.insert(key)
 
@@ -69,10 +90,14 @@ class BstNode:
         lines = [first_line, second_line] + [a + u * ' ' + b for a, b in zipped_lines]
         return lines, n + m + u, max(p, q) + 2, n + u // 2
 
+def main():
+    b = BstNode([50])
+    for _ in range(10):
+        b.insert(random.randint(0, 100))
+    b.display()
 
-import random
+    c = BstNode([i for i in range(4)])
+    c.display()
 
-b = BstNode(50)
-for _ in range(50):
-    b.insert(random.randint(0, 100))
-b.display()
+if __name__ == "__main__":
+    main()
