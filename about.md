@@ -24,4 +24,4 @@ Software Engineer. Dabbles in poker, sports analytics, chess...
 	* Web application that provides real time data for online poker rooms. 
 	* Predictive analytics allows users to better understand the dynamics of online games. 
 	* Django backend, Javascript+HTML+CSS frontend, Postgres for DB, Tesseract for OCR. 
-	* Github, with live link! (https://github.com/raymondhfeng/project_yuler)
+	* [Github, with live link!](https://github.com/raymondhfeng/project_yuler)
