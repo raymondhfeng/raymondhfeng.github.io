@@ -1,0 +1,63 @@
+# Max Priority Heap
+
+“””
+Create a max priority heap from an array of unsorted integers. You must use the integer array in-place to organize the heap. You may assume that the maximum size of the heap is defined by the items arrays it is initialized with.
+“””
+
+[0,1,2,3,4,5,6,7,...]
+The leaves of index i will be at ... 2i+1, 2i+2? 
+Insertion: 
+    first compare with the root, if larger
+
+class MaxPriorityHeap:
+    def __init__(self, items):
+        self.items = items
+        # self.binaryHeap = [0 for _ in range(len(items))]
+        def heapify(i):
+            if i > len(self.items) - 1:
+                return minInteger
+            else:
+                # left = 2*i + 1
+                # right = 2*i + 2
+                left = heapify(2*i+1)
+                heapify(2*i+2)
+                maxLeft = None
+                if left > self.items[i] and left > right:
+                    maxLeft = True
+                elif right > self.items[i] and right >= left:
+                    maxLeft = False
+                if maxLeft is not None:
+                    if maxLeft:
+                        temp = self.items[left]
+                        self.items[left] = self.items[i]
+                        self.items[i] = temp
+                    else:
+                        temp = self.items[right]
+                        self.items[right] = self.items[i]
+                        self.items[i] = temp
+                    
+                    
+    def dequeue(self):
+        “””
+        Returns the highest priority item in the heap.
+        “””
+        take the first element of the array
+        what to put at the root? the largest of the two leaves
+        assume left is largest
+        make left root
+        insert all of left's right subtree into previous roots right subtree
+        make left right pointer
+
+    def enqueue(self):
+        “””
+        Inserts a new item in the heap.
+        “””
+        …
+
+    def items_in_sorted_order(self):
+        “””
+        Returns the remaining items in the heap in descending order. You may invalidate the heap
+        after this operation.
+        “”” 
+        ...
+

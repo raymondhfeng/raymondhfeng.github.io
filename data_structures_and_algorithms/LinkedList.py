@@ -8,10 +8,13 @@ class LinkedList:
 		self.head = head
 
 	def append(self, value):
-		head = self.head
-		while head.after != None:
-			head = head.after
-		head.after = LLNode(value)
+		if self.head == None:
+			self.head = LLNode(value)
+		else:
+			head = self.head
+			while head.after != None:
+				head = head.after
+			head.after = LLNode(value)
 
 	def push(self, value):
 		newHead = LLNode(value)
@@ -32,6 +35,24 @@ class LinkedList:
 			else:
 				runner = runner.after
 		trailer.after = runner
+
+	def findLoopStart(self):
+		slow = self.head
+		fast = self.head
+		slow = slow.after
+		fast = fast.after
+		fast = fast.after
+		counter = 1
+		while slow != fast:
+			slow = slow.after
+			fast = fast.after
+			fast = fast.after
+			counter += 1
+		fast = self.head
+		while slow != fast:
+			slow = slow.after
+			fast = fast.after
+		return slow
 
 	def removeDuplicatesWithoutTempBuffer(self):
 		def removeValue(head, value): #removes all instances of value starting at head
@@ -102,12 +123,55 @@ class LinkedList:
 		result.head = result.head.after
 		return result
 
+	def partitionByValue(self, val):
+		less = None
+		lessCurr = less
+		geq = None
+		geqCurr = geq
+		head = self.head
+		while head:
+			print(head.value)
+			if head.value < val:
+				if not lessCurr:
+					less = head
+					lessCurr = less
+				else:
+					lessCurr.after = head
+					lessCurr = lessCurr.after
+			elif head.value >= val:
+				if not geq:
+					geq = head
+					geqCurr = geq
+				else:
+					geqCurr.after = head
+					geqCurr = geqCurr.after
+			head = head.after
+		self.head = less
+		lessCurr.after = geq
+		geqCurr.after = None
 
+	def isPalindrome(self):
+		reversed = LinkedList(None)
+		head = self.head
+		while head:
+			reversed.push(head.value)
+			head = head.after
+		headCurr = self.head
+		reversedCurr = reversed.head
+		while headCurr:
+			if not reversedCurr:
+				return False
+			if headCurr.value != reversedCurr.value:
+				return False
+			headCurr = headCurr.after
+			reversedCurr = reversedCurr.after
+		return True
 
 	def __str__(self):
 		result = []
 		pointer = self.head
 		while pointer:
+			print(pointer.value)
 			result += [pointer.value]
 			result += ["->"]
 			pointer = pointer.after
@@ -139,6 +203,49 @@ def main():
 	print(num2.numRepresentation())
 	additionResult = LinkedList.add(num1,num2)
 	print(additionResult.numRepresentation())
+
+	twelveToOne = LinkedList(None)
+	for i in range(1,13):
+		twelveToOne.append(13-i)
+	print(twelveToOne)
+	twelveToOne.partitionByValue(5)
+	print(twelveToOne)
+
+	oneToFive = LinkedList(None)
+	palin = LinkedList(None)
+	for i in range(1,5):
+		oneToFive.push(6-i)
+	palin.append(1)
+	palin.append(3)
+	palin.append(1)
+	palin2 = LinkedList(None)
+	palin2.append(6)
+	print(oneToFive.isPalindrome())
+	print(palin.isPalindrome())
+	print(palin2.isPalindrome())
+
+	fifteen = LLNode(15)
+	fourteen = LLNode(14, fifteen)
+	thirteen = LLNode(13, fourteen)
+	twelve = LLNode(12, thirteen)
+	eleven = LLNode(11, twelve)
+	ten = LLNode(10, eleven)
+	nine = LLNode(9, ten)
+	eight = LLNode(8, nine)
+	seven = LLNode(7, eight)
+	six = LLNode(6, seven)
+	five = LLNode(5, six)
+	four = LLNode(4, five)
+	three = LLNode(3, four)
+	two = LLNode(2, three)
+	one = LLNode(1, two)
+	LL1 = LinkedList(one)
+
+	fifteen.after = six
+	
+	loopStart = LL1.findLoopStart()
+	print(loopStart.value)
+
 
 if __name__ == "__main__":
 	main()

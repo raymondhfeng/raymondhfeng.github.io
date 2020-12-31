@@ -1,0 +1,31 @@
+Imitation Learning
+
+- MDP, POMDP
+- Imitation Learning: Assume environment is an MDP
+- Behavior Policy: The policy $$\pi_{\theta}(a \| s)$$ that the agent uses to act in the world. 
+- Target Policy: A policy $$\pi_{\theta^t}^t(a \| s)$$ the agent is learning. 
+- On policy: Agent learns from its own experience, so target policy = behavior policy
+- Off policy: Target policy $\neq$ behavior policy. More general. Can use experience from other agents. 
+- DAGGer
+- Domain Adaptation
+	* Shares early layers, fine-tunes CNN layers, and replicates FC layers. 
+	* Minimizes a composite loss
+- GAIL: Generative Adversarial Imitation Learning
+	* Rather than trying to mimic the user blindly, try to solve the same control problem that the user is solving. i.e. estimate the user's cost function, and then optimize the cost by training. This is called Inverse Reinforcement Learning (IRL)
+
+Policy Gradients
+
+- Fully observable MDP
+- Markov Decision Process
+- Challenges of RL
+	* For supervised learning problems, we trained end-to-end by minimizing a differentiable loss attached to the output of our network
+	* Assuming we have a differentiable policy $\pi_{\theta}(a_i \| s_i)$ such as a deep network, why cant we differentiate the reward wrt $\theta$ to optimize the policy?
+		- The reward $r(s_i,a_i)$ is a function of the action $a_i$ selected by the policy, and the action set is discrete for many problems. We cant directly differentiate through this discrete set. 
+		- We don't know the reward function - it's a black box. We cant differentiate through it. 
+		- Rewards also depend on the current state s_i, whcih depends on previous actions. Some earlier action $a_j$ which led us to $s_i$ may have been more important. Assigning appropriate weight to earlier actions is the Temporal Credit Assignment Problem. 
+- Policy Gradient Approach
+	* Can't differentiate the loss end-to-end via a "reward network", but we can estimate the gradient by enumerating trajectories, and computing the gradients along them. i.e. we can marginalize (average) over states and actions without knowing how they depend on the policy. 
+
+Value Based Methods
+
+- 

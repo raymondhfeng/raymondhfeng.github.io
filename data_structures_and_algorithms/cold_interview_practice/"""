@@ -1,0 +1,105 @@
+"""
+grid = [
+    ['S', 'C', 'M', 'S'],
+    ['N', 'R', 'A', 'E'],
+    ['Y', 'T', 'M', 'E'],
+    ['E', 'L', 'B', 'L'],
+]
+
+
+def scramble(grid, dictionary):
+    pass
+    
+
+assert scramble(grid, ('CAT', 'DOG', 'MART')) == ('CAT', 'MART')
+
+d = preprocess(dictionary)
+
+def scramble(grid, dictionary=d):
+    pass
+    
+    
+Movement rules:
+
+(1) Can move in any of the potentially 8 directions (diagonals included)
+(2) Paths that form words *must be acylic*
+
+D - O - G - $
+          - M - A
+"""
+
+class TrieNode:
+    def __init__(self,key,children):
+        self.key = key
+        self.children = children
+        self.child_map = {}
+        
+    
+    def has_child(self, char):
+        for trie in self.children:
+            if char == trie.key:
+                return True
+        return False
+    
+    def get_child(self, char):
+        return self.child_map.get(char)
+    
+    def is_word(self):
+        return self.has_child('$')
+        
+        
+# children is a list of trie nodes, if no next hops, empty list
+root = TrieNode(key='', children)
+
+# root.get_child('A') == True
+
+TrieNode.containsPrefix(prefix)
+
+# Must do dfs from every node..., pass in a COPY of visited set
+# copy sets of visited. 
+def scramble(grid,dictionary):
+    def search(i,j,visited,root,prefix): # returns list words found in grid contained in trie
+        # Check for out of bounds terimnation.
+        if i < 0 or i >= len(grid) or j < 0 or j >= len(grid[i]):
+            return []
+        
+        # Check that we've found a word. Add it to a results container.
+        result = []
+        if root.is_word():
+                result += [prefix]
+        
+        # If we have no more searching to do, give up.
+        elif len(root.children) == 0:
+            return result
+        
+        # If we do, though, proceed in 8 directions.
+        elif root.has_child(grid[i][j]):
+            child = root.get_child(grid[i][j])
+            visited.add((i,j))
+            result += search(i+1,j,visited,child,prefix+grid[i][j])
+            result += search(i-1,j,visited,child,prefix+grid[i][j])
+            result += search(i,j+1,visited,child,prefix+grid[i][j])
+            result += search(i,j-1,visited,child,prefix+grid[i][j])
+            result += search(i+1,j+1,visited,child,prefix+grid[i][j])
+            result += search(i+1,j-1,visited,child,prefix+grid[i][j])
+            result += search(i-1,j+1,visited,child,prefix+grid[i][j])
+            result += search(i-1,j-1,visited,child,prefix+grid[i][j])
+            return result 
+        else:
+            return []
+        
+    result = []
+    for i in range(len(grid)):
+        for j in range(len(grid)):
+            result += search(i,j,set(),trie)
+            
+            
+    '''
+    mp = multiprocess.ThreadPool(16)
+    mp.starmap(search, ())
+    yield mp
+    '''
+            
+    return result
+
+    

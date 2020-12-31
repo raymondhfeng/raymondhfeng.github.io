@@ -1,0 +1,41 @@
+
+Reports to: Deval Dudhia
+Recruiter: 
+Date: Monday, 2/24/2020
+Campus: SJ Orchard Campus
+Building: L2
+- 12:00 - 12:45 Rajul Kumhhani
+	* Education
+		- The Maharaja Sayajirao University of Baroda, Bachelors
+		- SCU, Masters
+	* Career
+		- 2001-2003 eBay Associate SWE
+		- 2003-2006 SWE
+		- 2006-Present Senior SWE
+	* Been at eBay for 19 years. Checkout platform development. Software development lead in checkout domain. Tax service integration in checkout. Credit card payment integration. Integration with 3rd parties and Paypal. 
+- 12:45 - 1:30 Wenjian Yue
+	* MTS1 SWE. 
+	* Education
+		- 2002-2005 Dalian Tech Master CS
+		- 2006-2007 Tarleton State MS CS
+		- 2007-2008 UT Dallas MS CS
+		- 2011-2013 Tarleton State MBA
+	* Career
+		- Feb 2015 - Oct 2017 Experian, Senior SWE Digital Advertising and Fraud Detection
+		- Been at eBay: 3 Years
+	* Main language appears to be Java
+	* Databases, Networks, 
+- 1:30 - 2:15 Deen Aariff
+	* Bunch of mutual friends, 2 years older than me. UT Austin for one year, then transferred to SCU. Knows Abinesh. 
+	* "I am a backend engineer specializing in building performant and maintainable Java and Node.js applications. I currently work on eBay's Payment + Checkout Experience."
+	* Getting his MS at George Tech, 2020-2022
+	* Dabbles in ML
+	* Been at eBay: 2 Years
+- 2:15 - 3:30 Kaustubh Khatri
+
+Post-Onsite Reflection
+
+- Rajul: She seems cool. Just a casual lunch interview with her. I mainly talked about my experience at Berkeley and explained my projects. 
+- Kaustubh: Classic problem. MxN grid, start with an arbitrary number of ones. Count the number of iterations until the entire grid is 1. Each update step makes all adjacent nodes 1. I feel like I didn't solve this problem the smart way, somewhat bombed the logic of completion because I wanted to save time. 
+- Deen Aariff, shadowed by Jason. Topological sort. Given dependents and dependencies, and p_ids, want to return an ordering that will allow for execution. Dependencies given by index. List of lists. The list at index i means that the p_ids[i] has those dependencies. Mostly solved this problem, but stumbled a lot. Made adjacency matrix instead of direct mapping. Mixed up index with node. DFS implementation was ok I think. 
+- Man filled in for Wenjian. Given a bus with ones and zeroes, seat n people such that the gaps are maximized. Couldn't figure out dynamic solution, so instead did greedy PQ solution. 

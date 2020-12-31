@@ -1,8 +1,24 @@
 ---
 layout: post
 title: Technologies 
-published: false
+published: true
 ---
+
+## Standard Libraries
+- Python
+- C
+- I feel like those two are really the only ones that you need to know. 
+
+## My Software Stack
+- Python...?
+
+## Positions
+Backend Software Engineer
+Quant
+MLE
+ML Infra
+Data Engineer
+Security
 
 Taking a step back to look at the "big picture".
 
@@ -36,6 +52,7 @@ Taking a step back to look at the "big picture".
 		- A list is a data structure that allows for constant time accesses, usually implemented using an array. A tuple is an immutable list, and is useful for returning more than 1 values for recursive calls. Sets are lists with no order and no duplicates, and are useful for storing visited nodes for tree/graph traversal algorithms such as DFS. A dictionary is a mapping from keys to values, and can be implemented in a hash map. Dictionaries can be used whenever you need a mapping.  
 	* 
 - Java
+	* Java SE
 - C
 - C++
 - Go
@@ -46,16 +63,58 @@ Taking a step back to look at the "big picture".
 - CSS
 - Javascript
 
+- Lisp
+- Clojure 
+- Scheme
+
+- CLang
+
 - MongoDB
 - Postgres
 - SQLite
+
+- ZooKeeper
+- Kafka
+- CitusDB
+
+- TypeScript
+- React
+- mobx
 
 - MPP databases
 	* Redshift
 	* Teradata
 	* Vertica
 
+- Big Data Technology Stack
+	* Hadoop
+	* Spark
+	* Hive
+	* HDFS
+
+- Kotlin
+
+- Ada
+- Lua
+- Middleware
+
+- Scrum
+
+- Angular JS
+- React JS
+- VueJS
+
+- Cassandra
+- Elastic Search
+- Spark
+
+- SOAP (Simple Object Access Protocol)
+
 - Agile methodology
+
+- Git
+- Subversion
+- Rest API
 
 - AWS Services
 	* S3, Lambda, Kinesis, Sagemaker
@@ -63,6 +122,19 @@ Taking a step back to look at the "big picture".
 	* Jenkins, CircleCI, Docker
 - Mobile App Technology
 	* IOS, Android, React-ndative
+
+- Data processing pipelines
+- Luigi
+- Airflow
+
+- CI/CD 
+- Travis
+- Jenkins
+
+- React, Vue, Elm, Cycle.js
+- Python, Node
+
+- Redux, Flux, Immutable.js, Flow, TypeScript, WebSockets, Apollo, Relay, GraphQL, React Hooks, React Native vs full native, ASM.js, WebGL, SVG vs Canvas, SQLAlchemy, Flask vs Django, Webpack, Grunt, Gulp, Flexbox, Sass, Styled Components, etc.
 
 ## Software framework
 - An abstraction in which software providing generic functionality can be selectively changed by additional user-written code, thus providing application-specific software. 

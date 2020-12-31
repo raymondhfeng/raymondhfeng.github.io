@@ -1,14 +1,36 @@
+Concepts and Implementations that I need to know through and through for technical interviews. 
+
+Array
+	- Stock holding/selling questions
+	- All stock buy/sell array problems from Leetcode. 
 Queue
 Stack
 Linked List
 Binary Tree
 Binary Search Tree
+	- Red Black
+	- AVL
+Sets
+Trie
+
+Heap
+Priority Queue
+	- Binary heap 
+Union Find
+	- Percolation
+Disjoint Set
+Bloom Filter
+Hash Functions, know a few simples ones
+	* Families of independent hash functions
 
 Bubble 
 Merge
 Quick
 QuickSelect
 Radix
+Shell Sort
+
+Design a caching algorithm
 
 In order 
 Post order
@@ -18,3 +40,50 @@ Morris traversal
 Path compression
 
 Median finding algorithm
+
+Dijkstras
+A*
+Floyd-Warshall Path Finding Algorithm
+Bellman-Ford Path Finding Algorithm
+
+Insert-Delete-GetRandom
+
+Gaussian Elimination
+Fast Fourier Transform
+	Using the FFT to solve change generating puzzles
+
+Solve of the fifteen puzzle...using A*? Sure. 
+
+The Stable Matching Algorithm
+
+Nim
+3B1B
+General Sum Game Solver
+Correlated Equilibrium/Regret Matching
+
+Chinese Remainder Theorem
+Extended Euclid's Algorithm
+RSA Visualization
+CRT
+
+A program for auction theory
+
+Poker hand identifier
+
+Sudoku
+
+Chess
+
+Online algorithms
+	- Kalman Filters
+	- DQN
+
+Coding Theory
+
+Parsing, Compilers
+
+Acronym Guesser
+
+Manacher's Algorithm
+
+Topological Sort

@@ -1,0 +1,46 @@
+#
+# Write a fucntion that returns true if a given number is power of 2. false it not.
+#
+
+import random
+
+def isPow2(num):
+    while num != 1:
+        if num == 0:
+            return False
+        elif num % 2 == 1:
+            return False
+        else:
+            num = num / 2
+    return True
+
+def nextrandom():
+    return 10
+    #return random.randint(1,100)
+
+def main():
+    # I need this function.  
+    occur = {}
+    numSamples = 100000
+    for i in range(numSamples):
+        num = nextrandom()
+        if num in occur:
+            occur[num] += 1
+        else:
+            occur[num] = 1
+    print(occur.keys())
+    keys = list(occur.keys())
+    print(keys)
+    lower = min(keys)
+    upper = max(keys)
+    expectedHits = numSamples / (upper - lower + 1)
+    # expectedHits = numSamples / len(occur)
+    errorThresh = 0.05
+    for key in occur:
+        if abs(occur[key] - expectedHits) / expectedHits > errorThresh:
+            print("ERROR: ", key, "doesn't look uniform ", occur[key])
+
+    
+
+if __name__ == "__main__": 
+    main()

@@ -4,10 +4,12 @@ title: About
 permalink: /about/
 published: true
 ---
-Senior at UC Berkeley studying computer science. Concentration in Machine Learning. Dabbles in poker, sports betting, sports analytics, chess...
+Software Engineer. Dabbles in poker, sports betting, sports analytics, chess...
 
-[Quixotic though it may sound](https://web.stanford.edu/~lmackey/), I hope to use CS to make the world a better place. 
+[Quixotic though it may sound](https://web.stanford.edu/~lmackey/), I hope to use technology to make the world a better place. 
 
+## Education
+- BA in Computer Science, UC Berkeley (2016-2020)
 
 ### Contact me
 

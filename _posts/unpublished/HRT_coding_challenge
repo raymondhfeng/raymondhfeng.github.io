@@ -1,0 +1,53 @@
+// you can use includes, for example:
+// #include <algorithm>
+
+// you can write to stdout for debugging purposes, e.g.
+// cout << "this is a debug message" << endl;
+
+#include <cmath>
+
+vector<int> solution(vector<int> &A, vector<int> &B) {
+    a = neg2to10(A);
+    b = neg2to10(B);
+    int c = a + b;
+    vector<int> result = 10toneg2(c);
+    return result;
+}
+
+int neg2to10(vector<int> &A) {
+    int sum = 0;
+    for (int a = 0; a < A.size(); a = a + 1) {
+        int multiplier = std::pow(-2,a);
+        sum = sum + A.at(a)*multiplier;
+    }
+    return sum;
+}
+
+vector<int> 10toneg2(int n) {
+    if (n == 0) {
+        return vector<int> vect{0};
+    }
+    int currIndex = 0;
+    int addPow = 0;
+    int subPow = 0;
+    while (n > addPow || n < subPow) {
+        if (i % 2 == 0) {
+            addPow += std::floor(currIndex / 2)*std::pow(2,2*currIndex);
+        } else {
+            addPow += std::floor((currIndex - 1) / 2)*std::pow(2,2*currIndex+1);
+        }
+        currIndex += 1;
+    }
+    vector<int> result(currIndex, 0);
+    currIndex -= 1;
+    while (currIndex >= 0) {
+        int currMult = std::pow(-2,currIndex);
+        if (n == 0) {
+            break;
+        } else if (n > 0) {
+            if (currMult < n)
+        }
+    }
+    return result
+}
+
