@@ -222,6 +222,7 @@ eb create
 be careful, dont lose track of your usage of amazon ec2 instances
 
 # References:
+- https://github.com/micahhausler/container-transform
 - https://uwsgi-docs.readthedocs.io/en/latest/tutorials/Django_and_nginx.html
 - https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/single-container-docker-configuration.html
 - https://pogasanov.ru/posts/django-docker-aws
@@ -233,3 +234,4 @@ be careful, dont lose track of your usage of amazon ec2 instances
 - https://www.sean-lan.com/2016/09/15/django-uwsgi-nginx/
 - https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-18-04
 - https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/java-se-nginx.html
+- https://console.aws.amazon.com/vpc/home?region=us-east-1
