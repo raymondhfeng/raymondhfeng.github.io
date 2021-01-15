@@ -13,7 +13,8 @@ Learning web development is challenging, and a lot of it is just trying out what
 ```
 Web Client <=> Elastic Beanstalk Load Balancer <=> Nginx <=> Gunicorn <=> uWSGI <=> Django
 ```
-https://uwsgi-docs.readthedocs.io/en/latest/tutorials/Django_and_nginx.html
+
+Install Docker
 
 Set up the project directory.
 ```
@@ -31,9 +32,35 @@ source .venv/bin/activate
 Create requirements.txt:
 
 ```
+Django==2.0.7
+gunicorn==19.6.0
+psycopg2==2.7.5
+```
 
+```
+django-admin.py startproject myproject app
+```
+
+In app/myproject/settings.py
+```
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'HOST': 'db',
+        'PORT': 5432,
+    }
+}
+```
+
+```
+ALLOWED_HOSTS = ['app']
+```
+
+```
+pip install docker-compose
 ```
 
 # References:
-I learned how to do this by combining a number of sources. 
-- 
+- https://uwsgi-docs.readthedocs.io/en/latest/tutorials/Django_and_nginx.html
